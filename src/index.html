@@ -19,11 +19,11 @@
 
 
         <nav class="menu-nav-index">
-            <a href="">Inicio</a>
-            <a href="">Combos</a>
-            <a href="">Pizzas</a>
-            <a href="">Menu</a>
+            <a class="active" href="#home">Inicio</a>
+            <a href="#promociones">Promociones</a>
+            <a href="#menu">Menu</a>
             <a href="">Orden</a>
+            <a href="">Contacto</a>
         </nav>
         <div class="icons">
             
@@ -64,109 +64,483 @@
 
     </header>
 
+    
+    <section class="home" id="home">
 
-    <div id="lista-cursos" class="lista-cursos">
+        <div class="slide">
+            <div class="slide-inner">
+                <input class="slide-open" type="radio" id="slide-1" 
+                      name="slide" aria-hidden="true" hidden="" checked="checked">
+                <div class="slide-item">
+                    <img src="img/pizza-promocion3.jpg" alt="pizza1">
+                </div>
+                <input class="slide-open" type="radio" id="slide-2" 
+                      name="slide" aria-hidden="true" hidden="">
+                <div class="slide-item">
+                    <img src="img/pizza-promocion2.jpg" alt="pizza2">
+                </div>
+                <input class="slide-open" type="radio" id="slide-3" 
+                      name="slide" aria-hidden="true" hidden="">
+                <div class="slide-item">
+                    <img src="img/pizza-promocion.jpg" alt="pizza3">
+                    
+                </div>
+                <label for="slide-3" class="slide-control prev control-1">‹</label>
+                <label for="slide-2" class="slide-control next control-1">›</label>
+                <label for="slide-1" class="slide-control prev control-2">‹</label>
+                <label for="slide-3" class="slide-control next control-2">›</label>
+                <label for="slide-2" class="slide-control prev control-3">‹</label>
+                <label for="slide-1" class="slide-control next control-3">›</label>
+                <ol class="slide-indicador">
+                    <li>
+                        <label for="slide-1" class="slide-circulo">•</label>
+                    </li>
+                    <li>
+                        <label for="slide-2" class="slide-circulo">•</label>
+                    </li>
+                    <li>
+                        <label for="slide-3" class="slide-circulo">•</label>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="post-content">
+            <div class="post-content-column1">
+                <img id="post-content-column1-img" src="img/header-post-content.png" alt="">
+                <h2 id="post-content-titulo">Bienvenido a La Spezia</h2>
+                <span>Nuestros chefs están trabajando 24/7 y están listos para aceptar visitantes a cuqluier hora del dia y de la noche</span>
+                <span>Nos gustaría aprovechar esta oportunidad para darle la bienvenida a nuestra pizzería.  </span>
+                <span>Le ofrecemos un ambiente cálido y acogedor para compartir una comida con la familia y los amigos a cualquier hora del día o de la noche.</span>
+                <button>LEARN MORE</button>
+            </div>
+            <div class="post-content-column2">
+                <a id="pizza-folleto1" href="#pizzas">
+                    <img src="img/pizza-folleto.jpg" alt="">
+                </a>
+                <a href="#pizzas">
+                    <img src="img/pizza-folleto2.jpg" alt="">
+                </a>
+            </div>
+        </div>
+        
+    </section>
+    
 
-
-        <h2 id="encabezado" class="encabezado"> ¡Prueba Nuestras Mejores Pizzas! </h2>
-
-        <div class="contenedor-tarjetas-pizzas">
-
-            <div class="four columns">
-                <div class="card">
-                    <img src="img/pizza-hawaiana.jpg" class="imagen-curso u-full-width">
-                    <div class="info-card">
-                        <h4>Pizza Hawaiana</h4>
-                        <p>Ingredientes</p>
-                        <p class="precio" id="precio">200</p>
+    <section class="promociones" id="promociones">
+        <div id="lista-cursos" class="lista-cursos">
+            <div class="encabezado">
+                <img id="lista-cursos-division" src="img/header-post-content.png" alt="">
+                <h2 id="encabezado"> ¡Prueba Nuestras Mejores Pizzas! </h2>
+            </div>
+            
+    
+            <div class="contenedor-tarjetas-pizzas">
+    
+                <div class="four-columns">
+                    <div class="card">
+                        <img src="img/pizza-combo.jpg" class="imagen-curso u-full-width">                        
+                        <div class="info-card">
+                            <div class="info-card-txt">
+                                <h4>Pizza combo 1</h4>
+                                <h6 id="info-card-subtitulo">¡Llévate una pizza a mitad de precio!</h6>
+                                <p>Deliciosa Pizza Orilla Rellena de Queso en cualquiera de las especialidades Favoritas:
+                                    Hawaiana, Mexicana, Pastor, Alambre,suprema, Deluxe, Meat Lover's, Cheesy Lover's, Veggie Lover's</p>
+                                <p id="tyc">*Aplican términos y condiciones*</p>
+                                <p class="precio" id="precio">210</p>
+                            </div>
+                            
+                            
+                        </div>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar
-                            Al Carrito</a>
+                                Al Carrito</a>
+
                     </div>
                 </div>
-                <!--.card-->
-            </div>
-
-            <div class="four columns">
-                <div class="card">
-                    <img src="img/pizza-pastor.jpg" class="imagen-curso u-full-width">
-                    <div class="info-card">
-                        <h4>Pizza Pastor</h4>
-                        <p>Ingredientes</p>
-                        <p class="precio" id="precio">210</p>
+    
+                <div class="four-columns">
+                    <div class="card">
+                        <img src="img/pizza-combo2.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <div class="info-card-txt">
+                                <h4>Pizza combo 2</h4>
+                                <h6 id="info-card-subtitulo">¡30% de descuento en mingle pizza meal!</h6>
+                                <p>Deliciosa Pizza Orilla Rellena de Queso en cualquiera de las especialidades Favoritas:
+                                    Hawaiana, Mexicana, Pastor, Alambre,suprema, Deluxe, Meat Lover's, Cheesy Lover's, Veggie Lover's</p>
+                                <p id="tyc">*Aplican términos y condiciones*</p>
+                                <p class="precio" id="precio">210</p>
+                            </div>
+                        </div>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar
                             Al Carrito</a>
                     </div>
                 </div>
-            </div>
-
-            <div class="four columns">
-                <div class="card">
-                    <img src="img/Pizza-mexicana.jpg" class="imagen-curso u-full-width">
-                    <div class="info-card">
-                        <h4>Pizza Mexicana</h4>
-                        <p>Ingredientes</p>
-                        <p class="precio" id="precio">200</p>
+    
+                <div class="four-columns">
+                    <div class="card">
+                        <img src="img/pizza-combo3.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <div class="info-card-txt">
+                                <h4>Pizza combo 3</h4>
+                                <h6 id="info-card-subtitulo">¡30% de descuento en mingle pizza meal!</h6>
+                                <p>Deliciosa Pizza Orilla Rellena de Queso en cualquiera de las especialidades Favoritas:
+                                    Hawaiana, Mexicana, Pastor, Alambre,suprema, Deluxe, Meat Lover's, Cheesy Lover's, Veggie Lover's</p>
+                                <p id="tyc">*Aplican términos y condiciones*</p>
+                                <p class="precio" id="precio">210</p>
+                            </div>
+                        </div>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar
                             Al Carrito</a>
                     </div>
                 </div>
-                <!--.card-->
-            </div>
-
-            <div class="four columns">
-                <div class="card">
-                    <img src="img/pizza-margarita.jpg" class="imagen-curso u-full-width">
-                    <div class="info-card">
-                        <h4>Pizza Margarita</h4>
-                        <p>Ingredientes</p>
-                        <p class="precio" id="precio">169</p>
+    
+                <div class="four-columns">
+                    <div class="card">
+                        <img src="img/pizza-combo4.jpg" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <div class="info-card-txt">
+                                <h4>Pizza combo 4</h4>
+                                <h6 id="info-card-subtitulo">¡30% de descuento en mingle pizza meal!</h6>
+                                <p>Deliciosa Pizza Orilla Rellena de Queso en cualquiera de las especialidades Favoritas:
+                                    Hawaiana, Mexicana, Pastor, Alambre,suprema, Deluxe, Meat Lover's, Cheesy Lover's, Veggie Lover's</p>
+                                <p id="tyc">*Aplican términos y condiciones*</p>
+                                <p class="precio" id="precio">210</p>
+                            </div>
+                        </div>
                         <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar
                             Al Carrito</a>
                     </div>
                 </div>
-                <!--.card-->
-            </div>
+    
 
-            <div class="four columns">
-                <div class="card">
-                    <img src="img/pizza-peperoni.jpg" class="imagen-curso u-full-width">
-                    <div class="info-card">
-                        <h4>Pizza Peperoni</h4>
-                        <p>Ingredientes</p>
-                        <p class="precio" id="precio">200</p>
-                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar
-                            Al Carrito</a>
+    
+            </div>
+            <!--.fila-tarjetas-pizzas -->
+    
+        </div>
+    </section>
+    
+    <section class="menu" id="menu">
+        <div class="lista-pizzas">
+            <div class="encabezado">
+                <img id="lista-cursos-division" src="img/header-post-content.png" alt="">
+                <h2 id="encabezado"> Menú destacado </h2>
+            </div>
+            <div class="lista-pizzas-content">
+                <ul class="lista-pizzas-content-ul">
+                    <li class="lista-pizzas-content-first-li lista-pizzas-content-li" id="lista-pizzas-content-first-li" onclick="divShow('lista-pizzas-pizzas')">
+                        <a id="lista-pizzas-content-a-pizzas" href="#lista-pizzas-pizzas" class="lista-pizzas-content-a">Pizzas</a>
+                    </li>
+                    <li class="lista-pizzas-content-any-li lista-pizzas-content-li" id="lista-pizzas-content-any-li" onclick="divShow('lista-pizzas-refrescos')">
+                        <a id="lista-pizzas-content-a-refrescos" href="#lista-pizzas-refrescos" class="lista-pizzas-content-a">Refrescos</a>
+                    </li>
+                    <li class="lista-pizzas-content-any-li lista-pizzas-content-li" id="lista-pizzas-content-any-li" onclick="divShow('lista-pizzas-complementos')">
+                        <a id="lista-pizzas-content-a-complementos" href="#lista-pizzas-complementos" class="lista-pizzas-content-a">Complementos</a>
+                    </li>
+                    <li class="lista-pizzas-content-any-li lista-pizzas-content-li" id="lista-pizzas-content-any-li" >
+                        <a onclick="divShow('lista-pizzas-postres')" id="lista-pizzas-content-a-pizzas" href="#lista-pizzas-postres" class="lista-pizzas-content-a">Postres</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                
+            </div>
+            <div class="lista-pizzas-productos" id="lista-pizzas-pizzas" data-related="load_pizzas">
+                <div class="lista-pizzas-productos-column">
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-camarones.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Camarones</h6>
+                            <p id="precio-pieza">$289</p>
+                            <p>Prueba la nueva pizza de camarón de pacotilla</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-mexicana.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Combinada</h6>
+                            <p id="precio-pieza">$189</p>
+                            <p>Prueba la rica combinada de jamón, champiñón y pimiento</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-alambre.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Alambre</h6>
+                            <p id="precio-pieza">$209</p>
+                            <p>Prueba la clásica de pastor, tocino, pimientos y cebolla</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
                     </div>
                 </div>
-                <!--.card-->
-            </div>
-
-            <div class="four columns">
-                <div class="card">
-                    <img src="img/pizza-peperoni.jpg" class="imagen-curso u-full-width">
-                    <div class="info-card">
-                        <h4>Pizza Peperoni</h4>
-                        <p>Ingredientes</p>
-                        <p class="precio" id="precio">180</p>
-                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar
-                            Al Carrito</a>
+                <div class="lista-pizzas-productos-column">
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-4quesos.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>4 quesos</h6>
+                            <p id="precio-pieza">$209</p>
+                            <p>Pizza de mozarela, gorgonzola, fontina y el parmesano</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-ranchera.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Ranchera</h6>
+                            <p id="precio-pieza">$289</p>
+                            <p>Prueba la pizza con frijol, chorizo y rajas</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-veneciana.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Veneciana</h6>
+                            <p id="precio-pieza">$269</p>
+                            <p>Prueba la especialidad de peperonni y champiñon</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
                     </div>
                 </div>
-                <!--.card-->
+            </div>
+            <div class="lista-pizzas-productos" id="lista-pizzas-refrescos" data-related="load_refrescos">
+                <div class="lista-pizzas-productos-column">
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/avatar.png" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Camarones</h6>
+                            <p id="precio-pieza">$289</p>
+                            <p>Prueba la nueva pizza de camarón de pacotilla</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-mexicana.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Combinada</h6>
+                            <p id="precio-pieza">$189</p>
+                            <p>Prueba la rica combinada de jamón, champiñón y pimiento</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-alambre.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Alambre</h6>
+                            <p id="precio-pieza">$209</p>
+                            <p>Prueba la clásica de pastor, tocino, pimientos y cebolla</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="lista-pizzas-productos-column">
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-4quesos.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>4 quesos</h6>
+                            <p id="precio-pieza">$209</p>
+                            <p>Pizza de mozarela, gorgonzola, fontina y el parmesano</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-ranchera.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Ranchera</h6>
+                            <p id="precio-pieza">$289</p>
+                            <p>Prueba la pizza con frijol, chorizo y rajas</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-veneciana.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Veneciana</h6>
+                            <p id="precio-pieza">$269</p>
+                            <p>Prueba la especialidad de peperonni y champiñon</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lista-pizzas-productos" id="lista-pizzas-complementos" data-related="load_complementos">
+                <div class="lista-pizzas-productos-column">
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/carrito.png" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Camarones</h6>
+                            <p id="precio-pieza">$289</p>
+                            <p>Prueba la nueva pizza de camarón de pacotilla</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-mexicana.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Combinada</h6>
+                            <p id="precio-pieza">$189</p>
+                            <p>Prueba la rica combinada de jamón, champiñón y pimiento</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-alambre.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Alambre</h6>
+                            <p id="precio-pieza">$209</p>
+                            <p>Prueba la clásica de pastor, tocino, pimientos y cebolla</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="lista-pizzas-productos-column">
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-4quesos.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>4 quesos</h6>
+                            <p id="precio-pieza">$209</p>
+                            <p>Pizza de mozarela, gorgonzola, fontina y el parmesano</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-ranchera.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Ranchera</h6>
+                            <p id="precio-pieza">$289</p>
+                            <p>Prueba la pizza con frijol, chorizo y rajas</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-veneciana.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Veneciana</h6>
+                            <p id="precio-pieza">$269</p>
+                            <p>Prueba la especialidad de peperonni y champiñon</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <dive class="lista-pizzas-productos" id="lista-pizzas-postres" data-related="load_postres">
+                <div class="lista-pizzas-productos-column">
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/facebook-logotipo.png" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Camarones</h6>
+                            <p id="precio-pieza">$289</p>
+                            <p>Prueba la nueva pizza de camarón de pacotilla</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-mexicana.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Combinada</h6>
+                            <p id="precio-pieza">$189</p>
+                            <p>Prueba la rica combinada de jamón, champiñón y pimiento</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-alambre.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Alambre</h6>
+                            <p id="precio-pieza">$209</p>
+                            <p>Prueba la clásica de pastor, tocino, pimientos y cebolla</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <div class="lista-pizzas-productos-column">
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-4quesos.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>4 quesos</h6>
+                            <p id="precio-pieza">$209</p>
+                            <p>Pizza de mozarela, gorgonzola, fontina y el parmesano</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-ranchera.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Ranchera</h6>
+                            <p id="precio-pieza">$289</p>
+                            <p>Prueba la pizza con frijol, chorizo y rajas</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column-elemento">
+                        <img src="img/pizza-menu-veneciana.jpg" alt="">
+                        <div class="lista-pizzas-productos-column-elemento-txt">
+                            <h6>Veneciana</h6>
+                            <p id="precio-pieza">$269</p>
+                            <p>Prueba la especialidad de peperonni y champiñon</p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                Al Carrito</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
-        <!--.fila-tarjetas-pizzas -->
-
-    </div>
-
+    </section>
 
     <div id="id01" class="modal">
 
         <form class="modal-content animate" action="/action_page.php" method="post">
             <div class="h3container">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                    title="Close Modal">&times;</span>
+                
                 <h3>Sign In With</h3>
                 
                 <button id="button-facebook" type="submit">
@@ -177,6 +551,8 @@
                     <img src="img/google-logotipo.png" alt="Google">
                     Google
                 </button>
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
             </div>
 
             <div class="container">
