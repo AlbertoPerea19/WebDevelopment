@@ -446,8 +446,7 @@ header .icons img{
   margin: 0 1em;
 }
 
-.lista-pizzas-productos{ 
-  display: none;
+.target{ 
   align-items: center;
   display: flex;
   width: fit-content;
@@ -465,10 +464,13 @@ header .icons img{
   padding: 1em 0em;
 }
 
+.lista-productos{
+  display: flex;
+}
 
 
 .lista-pizzas-productos-column-elemento{
-  margin: 1em 0;
+  margin: 1.5em 0;
   height: max-content;
 }
 
@@ -495,30 +497,20 @@ header .icons img{
 
 
 .lista-pizzas-productos-column-elemento img{
-  margin-top: 1em;
+  margin-top: 0.5em;
   border: none;
   display: inline-block;
   vertical-align: middle;
   float: left;
   margin-right: 1.1em;
-  width: 40%;
+  width: 11em;
+  height: 9em;
   border-radius: 50%;
   overflow: hidden;
 
 }
-/* #lista-pizzas-pizzas-hide{
-  display: none;
-}
 
-#lista-pizzas-refrescos-hide{
-  display: none;
-}
-#lista-pizzas-complementos-hide{
-  display: none;
-}
-#lista-pizzas-postres-hide{
-  display: none;
-} */
+
 
 
 
@@ -538,18 +530,13 @@ header .icons img{
   color: #ca0808;
 }
 
-#lista-pizzas-content-any-li a:hover{
+ul .clickto a:hover, ul .clickto a.activate{
   background-color: #d32b1f;
   border-radius: 21px;
   color: white;
 }
 
-#lista-pizzas-content-first-li a {
-  
-  background-color: #d32b1f;
-  border-radius: 21px;
-  color: white;
-}
+
 
 #lista-pizzas-content-any-li:focus {
   display: block;
@@ -619,6 +606,61 @@ input[type="button"]:focus {
     outline: 0; 
 }
 
+/* orden design */
+.orden form{
+  max-width:70%;
+  border-radius: .5rem;
+  box-shadow: var(--box-shadow);
+  border:.1rem solid rgba(0,0,0,.2);
+  background:#ffffff;
+  padding:1.5rem;
+  margin:0 auto;
+}
+
+.orden form .inputBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.orden form .inputBox .input{
+  width:45%;
+}
+
+.orden form .inputBox .input span{
+  display:block;
+  padding:.5rem 0;
+  font-size: 1rem;
+  color:var(--light-color);
+}
+
+.orden form .inputBox .input input,
+.orden form .inputBox .input textarea{
+  background:#eee;
+  border-radius: .5rem;
+  padding:0.5rem;
+  font-size: 1rem;
+  color:var(--black);
+  text-transform: none;
+  margin-bottom: 1rem;
+  width:95%;
+}
+
+.orden form .inputBox .input input:focus,
+.orden form .inputBox .input textarea:focus{
+  border:.1rem solid var(--green);
+}
+
+.orden form .inputBox .input textarea{
+  height:10rem;
+  resize: none;
+}
+
+.orden form .btn{
+  margin-top: 0;
+}
+
+/* footer design */
 .footer-index{
     margin-top: 40px;
     border-top: 1px solid #aaa;

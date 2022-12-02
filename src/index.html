@@ -8,6 +8,7 @@
     <title>La Spezia</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -22,8 +23,8 @@
             <a class="active" href="#home">Inicio</a>
             <a href="#promociones">Promociones</a>
             <a href="#menu">Menu</a>
-            <a href="">Orden</a>
-            <a href="">Contacto</a>
+            <a href="#orden">Orden</a>
+            <a href="#footer">Contacto</a>
         </nav>
         <div class="icons">
             
@@ -225,313 +226,313 @@
                 <img id="lista-cursos-division" src="img/header-post-content.png" alt="">
                 <h2 id="encabezado"> Menú destacado </h2>
             </div>
-            <div class="lista-pizzas-content">
-                <ul class="lista-pizzas-content-ul">
-                    <li class="lista-pizzas-content-first-li lista-pizzas-content-li" id="lista-pizzas-content-first-li" onclick="divShow('lista-pizzas-pizzas')">
-                        <a id="lista-pizzas-content-a-pizzas" href="#lista-pizzas-pizzas" class="lista-pizzas-content-a">Pizzas</a>
+            <div class="lista-pizzas-content" >
+                <ul class="lista-pizzas-content-ul ">
+                    <li class="lista-pizzas-content-first-li clickto"  target="1">
+                        <a class="activate" id="li1" href="#menu" class="lista-pizzas-content-a">Pizzas</a>
                     </li>
-                    <li class="lista-pizzas-content-any-li lista-pizzas-content-li" id="lista-pizzas-content-any-li" onclick="divShow('lista-pizzas-refrescos')">
-                        <a id="lista-pizzas-content-a-refrescos" href="#lista-pizzas-refrescos" class="lista-pizzas-content-a">Refrescos</a>
+                    <li class="lista-pizzas-content-any-li clickto"  target="2">
+                        <a href="#menu" id="li2" class="lista-pizzas-content-a">Refrescos</a>
                     </li>
-                    <li class="lista-pizzas-content-any-li lista-pizzas-content-li" id="lista-pizzas-content-any-li" onclick="divShow('lista-pizzas-complementos')">
-                        <a id="lista-pizzas-content-a-complementos" href="#lista-pizzas-complementos" class="lista-pizzas-content-a">Complementos</a>
+                    <li class="lista-pizzas-content-any-li clickto"  target="3">
+                        <a href="#menu" id="li3" class="lista-pizzas-content-a">Complementos</a>
                     </li>
-                    <li class="lista-pizzas-content-any-li lista-pizzas-content-li" id="lista-pizzas-content-any-li" >
-                        <a onclick="divShow('lista-pizzas-postres')" id="lista-pizzas-content-a-pizzas" href="#lista-pizzas-postres" class="lista-pizzas-content-a">Postres</a>
+                    <li class="lista-pizzas-content-any-li clickto"  target="4">
+                        <a href="#menu" id="li4" class="lista-pizzas-content-a">Postres</a>
                     </li>
                 </ul>
             </div>
-            <div>
-                
+            <div id="lista-productos">
+                <div class="target" id="div1">
+                    <div class="lista-pizzas-productos-column">
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/pizza-menu-camarones.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Camarones</h6>
+                                <p id="precio-pieza">$289</p>
+                                <p>Prueba la nueva pizza de camarón de pacotilla</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/pizza-menu-mexicana.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Combinada</h6>
+                                <p id="precio-pieza">$189</p>
+                                <p>Prueba la rica combinada de jamón, champiñón y pimiento</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/pizza-menu-alambre.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Alambre</h6>
+                                <p id="precio-pieza">$209</p>
+                                <p>Prueba la clásica de pastor, tocino, pimientos y cebolla</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column">
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/pizza-menu-4quesos.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>4 quesos</h6>
+                                <p id="precio-pieza">$209</p>
+                                <p>Pizza de mozarela, gorgonzola, fontina y el parmesano</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/pizza-menu-ranchera.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Ranchera</h6>
+                                <p id="precio-pieza">$289</p>
+                                <p>Prueba la pizza con frijol, chorizo y rajas</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/pizza-menu-veneciana.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Veneciana</h6>
+                                <p id="precio-pieza">$269</p>
+                                <p>Prueba la especialidad de peperonni y champiñon</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="target" id="div2">
+                    <div class="lista-pizzas-productos-column">
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-refresco-coca.png" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Coca-cola</h6>
+                                <p id="precio-pieza">$39</p>
+                                <p>Disfruta una rica Coca-cola de 600ml</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-refresco-arizona.png" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Arizona</h6>
+                                <p id="precio-pieza">$39</p>
+                                <p>Disfruta de nuestros diferentes sabores de Arizona</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-refresco-drpepper.png" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Dr Pepper</h6>
+                                <p id="precio-pieza">$49</p>
+                                <p>Nada mejor que un dr pepper con una deliciosa pizza</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column">
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-refresco-dry.png" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Canada Dry</h6>
+                                <p id="precio-pieza">$49</p>
+                                <p>Agua mineralizada, que libera el sabor de tus comidas</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-refresco-sprite.png" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Squirt</h6>
+                                <p id="precio-pieza">$39</p>
+                                <p>Disfruta los sabores de la familia Coca-cola</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-refresco-mundet.png" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Sidral Mundet</h6>
+                                <p id="precio-pieza">$39</p>
+                                <p>Disfruta los sabores de la familia Coca-cola</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="target" id="div3" >
+                    <div class="lista-pizzas-productos-column">
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-complemento-bastonesPan.png" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Bastones</h6>
+                                <p id="precio-pieza">$89</p>
+                                <p>Bastones de pan rellenos de delicioso queso crema</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-complemento-lasaña.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Lazagna</h6>
+                                <p id="precio-pieza">$109</p>
+                                <p>Lazagna al estilo italiano como solo nosotros lo sabemos hacer</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-complemento-nachos.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Nachos</h6>
+                                <p id="precio-pieza">$99</p>
+                                <p>Nachos con salsa picante, pico de gallo, carne y un delicioso queso</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column">
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-complemento-papasgajo.png" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Papas Gajo</h6>
+                                <p id="precio-pieza">$79</p>
+                                <p>disfruta de nuestras deliciosas papas rebanadas en gajo</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-complemento-papasZatis.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Papas Zatis</h6>
+                                <p id="precio-pieza">$79</p>
+                                <p>Deliciosas papas rellanas de queso y jalapeño</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-complemento-spaguetti.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Spaguetti</h6>
+                                <p id="precio-pieza">$109</p>
+                                <p>Disfruta de nuestros diferentes platillos: Italiano, Camarones, Tropical, A la mar y Al ajo</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="target" id="div4">
+                    <div class="lista-pizzas-productos-column">
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-postre-natilla.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Natilla</h6>
+                                <p id="precio-pieza">$29</p>
+                                <p>Disfruta de la natilla Danette 4 pack de 100 g/u </p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-postre-flan.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Flan</h6>
+                                <p id="precio-pieza">$29</p>
+                                <p>Disfruta de un rico flan Danette 4 pack de 100 g/u</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-postre-mordisko.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Mini Mordisko</h6>
+                                <p id="precio-pieza">$29</p>
+                                <p>Disfruta un delicioso mini mordisko de la marca Holanda</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="lista-pizzas-productos-column">
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-postre-paleta.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Paleta helada</h6>
+                                <p id="precio-pieza">$39</p>
+                                <p>Deliciosa paleta helada de fresa con cubierta de chocolate</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-postre-panke.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Panké</h6>
+                                <p id="precio-pieza">$39</p>
+                                <p>Disfruta del delicioso panké estilo keto, baja en calorias</p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                        <div class="lista-pizzas-productos-column-elemento">
+                            <img src="img/menu-postre-reposteria.jpg" alt="">
+                            <div class="lista-pizzas-productos-column-elemento-txt">
+                                <h6>Borwnie</h6>
+                                <p id="precio-pieza">$29</p>
+                                <p>Llévate un delicioso brownie de chocolate Hershey's </p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
+                                    Al Carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="lista-pizzas-productos" id="lista-pizzas-pizzas" data-related="load_pizzas">
-                <div class="lista-pizzas-productos-column">
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-camarones.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Camarones</h6>
-                            <p id="precio-pieza">$289</p>
-                            <p>Prueba la nueva pizza de camarón de pacotilla</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-mexicana.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Combinada</h6>
-                            <p id="precio-pieza">$189</p>
-                            <p>Prueba la rica combinada de jamón, champiñón y pimiento</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-alambre.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Alambre</h6>
-                            <p id="precio-pieza">$209</p>
-                            <p>Prueba la clásica de pastor, tocino, pimientos y cebolla</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-                <div class="lista-pizzas-productos-column">
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-4quesos.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>4 quesos</h6>
-                            <p id="precio-pieza">$209</p>
-                            <p>Pizza de mozarela, gorgonzola, fontina y el parmesano</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-ranchera.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Ranchera</h6>
-                            <p id="precio-pieza">$289</p>
-                            <p>Prueba la pizza con frijol, chorizo y rajas</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-veneciana.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Veneciana</h6>
-                            <p id="precio-pieza">$269</p>
-                            <p>Prueba la especialidad de peperonni y champiñon</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="lista-pizzas-productos" id="lista-pizzas-refrescos" data-related="load_refrescos">
-                <div class="lista-pizzas-productos-column">
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/avatar.png" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Camarones</h6>
-                            <p id="precio-pieza">$289</p>
-                            <p>Prueba la nueva pizza de camarón de pacotilla</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-mexicana.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Combinada</h6>
-                            <p id="precio-pieza">$189</p>
-                            <p>Prueba la rica combinada de jamón, champiñón y pimiento</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-alambre.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Alambre</h6>
-                            <p id="precio-pieza">$209</p>
-                            <p>Prueba la clásica de pastor, tocino, pimientos y cebolla</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-                <div class="lista-pizzas-productos-column">
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-4quesos.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>4 quesos</h6>
-                            <p id="precio-pieza">$209</p>
-                            <p>Pizza de mozarela, gorgonzola, fontina y el parmesano</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-ranchera.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Ranchera</h6>
-                            <p id="precio-pieza">$289</p>
-                            <p>Prueba la pizza con frijol, chorizo y rajas</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-veneciana.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Veneciana</h6>
-                            <p id="precio-pieza">$269</p>
-                            <p>Prueba la especialidad de peperonni y champiñon</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="lista-pizzas-productos" id="lista-pizzas-complementos" data-related="load_complementos">
-                <div class="lista-pizzas-productos-column">
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/carrito.png" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Camarones</h6>
-                            <p id="precio-pieza">$289</p>
-                            <p>Prueba la nueva pizza de camarón de pacotilla</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-mexicana.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Combinada</h6>
-                            <p id="precio-pieza">$189</p>
-                            <p>Prueba la rica combinada de jamón, champiñón y pimiento</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-alambre.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Alambre</h6>
-                            <p id="precio-pieza">$209</p>
-                            <p>Prueba la clásica de pastor, tocino, pimientos y cebolla</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-                <div class="lista-pizzas-productos-column">
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-4quesos.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>4 quesos</h6>
-                            <p id="precio-pieza">$209</p>
-                            <p>Pizza de mozarela, gorgonzola, fontina y el parmesano</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-ranchera.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Ranchera</h6>
-                            <p id="precio-pieza">$289</p>
-                            <p>Prueba la pizza con frijol, chorizo y rajas</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-veneciana.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Veneciana</h6>
-                            <p id="precio-pieza">$269</p>
-                            <p>Prueba la especialidad de peperonni y champiñon</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <dive class="lista-pizzas-productos" id="lista-pizzas-postres" data-related="load_postres">
-                <div class="lista-pizzas-productos-column">
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/facebook-logotipo.png" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Camarones</h6>
-                            <p id="precio-pieza">$289</p>
-                            <p>Prueba la nueva pizza de camarón de pacotilla</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-mexicana.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Combinada</h6>
-                            <p id="precio-pieza">$189</p>
-                            <p>Prueba la rica combinada de jamón, champiñón y pimiento</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-alambre.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Alambre</h6>
-                            <p id="precio-pieza">$209</p>
-                            <p>Prueba la clásica de pastor, tocino, pimientos y cebolla</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-                <div class="lista-pizzas-productos-column">
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-4quesos.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>4 quesos</h6>
-                            <p id="precio-pieza">$209</p>
-                            <p>Pizza de mozarela, gorgonzola, fontina y el parmesano</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-ranchera.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Ranchera</h6>
-                            <p id="precio-pieza">$289</p>
-                            <p>Prueba la pizza con frijol, chorizo y rajas</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                    <div class="lista-pizzas-productos-column-elemento">
-                        <img src="img/pizza-menu-veneciana.jpg" alt="">
-                        <div class="lista-pizzas-productos-column-elemento-txt">
-                            <h6>Veneciana</h6>
-                            <p id="precio-pieza">$269</p>
-                            <p>Prueba la especialidad de peperonni y champiñon</p>
-                            <a href="#" class="u-full-width button-primary button input agregar-carrito" id="button-agregar-carrito-menu-destacado" data-id="5">Agregar
-                                Al Carrito</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
         </div>
     </section>
@@ -574,7 +575,61 @@
         </form>
     </div>
 
-    <footer class="footer-index">
+    <section class="orden" id="orden">
+
+        <h3 class="sub-heading"> order now </h3>
+        <h1 class="heading"> free and fast </h1>
+    
+        <form action="">
+    
+            <div class="inputBox">
+                <div class="input">
+                    <span>your name</span>
+                    <input type="text" placeholder="enter your name">
+                </div>
+                <div class="input">
+                    <span>your number</span>
+                    <input type="number" placeholder="enter your number">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>your order</span>
+                    <input type="text" placeholder="enter food name">
+                </div>
+                <div class="input">
+                    <span>additional food</span>
+                    <input type="test" placeholder="extra with food">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>how musch</span>
+                    <input type="number" placeholder="how many orders">
+                </div>
+                <div class="input">
+                    <span>date and time</span>
+                    <input type="datetime-local">
+                </div>
+            </div>
+            <div class="inputBox">
+                <div class="input">
+                    <span>your address</span>
+                    <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="input">
+                    <span>your message</span>
+                    <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+    
+            <input type="submit" value="order now" class="btn">
+    
+        </form>
+    
+    </section>
+
+    <footer class="footer-index" id="footer">
 
         <h4>Contáctanos</h4>
 

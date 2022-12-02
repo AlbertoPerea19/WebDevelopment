@@ -7,25 +7,27 @@ let articulosCarrito = [];
 let navbar = document.querySelector('.menu-nav-index');
 let section = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header .menu-nav-index a');
+let navLinksProductos = document.querySelectorAll('ul .clickto a');
 
-const mostrar = (elemento) => {
-    elemento.style.display = 'block';
-}
-const ocultar = (elemento) => {
-    elemento.style.display = 'none';
-}
+let navProductos = document.querySelector('.clickto');
 
-function divShow(Id) {
+jQuery('.target').hide();
+jQuery('#div1').show();
 
-    if(document.getElementById(Id).style.height==="0px"
-    || document.getElementById(Id).style.height ==''
-    ){
-    document.getElementById(Id).style.height = "100px";
-    } else{
-        document.getElementById(Id).style.height = "0px";      
-    }   
-    
-}
+jQuery(function(){
+    jQuery('.clickto').click(function(){
+        jQuery('.target').hide();
+        jQuery('#div'+$(this).attr('target')).show();
+        
+        navLinksProductos.forEach(links =>{
+            links.classList.remove('activate');
+            
+        });
+        let id=('#li'+$(this).attr('target'));
+        jQuery(id).addClass('activate');
+    });
+});
+
 
 window.onscroll=()=>{
 
