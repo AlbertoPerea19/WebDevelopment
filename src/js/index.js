@@ -36,7 +36,7 @@ window.onscroll=()=>{
 
         let top = window.scrollY;
         let height = sec.offsetHeight;
-        let offset = sec.offsetTop - 200;
+        let offset = sec.offsetTop - 100;
         let id = sec.getAttribute('id');
     
         if(top >= offset && top < offset + height){
