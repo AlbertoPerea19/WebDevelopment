@@ -152,7 +152,7 @@ function carritoHTML(){
             <td>$${producto.precio}</td>
             <td>$${costo}</td>
             <td>
-                <img id="logo-borrar" src="img/remover.png" width="20px" href="#" class="borrar-curso" data-id="${producto.id}"></img>
+                <img id="logo-borrar" src="src/img/remover.png" width="20px" href="#" class="borrar-curso" data-id="${producto.id}"></img>
             </td>
         `; 
         total+=costo;
@@ -206,3 +206,40 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function onSignIn(googleUser) {
+    var profile = googleUser.getBasicProfile();
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+  }
+
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+
+//   FACEBOOK SIGN-IN
+
+function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+    });
+  }
+
+  let menu = document.querySelector('#menu-bars');
+  menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+  }
+
+  document.querySelector('#search-icon').onclick = () =>{
+    document.querySelector('#search-form').classList.toggle('active');
+  }
+  
+  document.querySelector('#close').onclick = () =>{
+    document.querySelector('#search-form').classList.remove('active');
+  }

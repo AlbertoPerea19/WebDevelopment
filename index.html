@@ -6,16 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Spezia</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/estilos.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="kYHHOdk0"></script>
+
+    <meta name="google-signin-client_id" content="625142742217-43gvq7oqf2a8aon72obe2plmdcem6a3p.apps.googleusercontent.com">
 </head>
 
 <body>
 
     <header class="header-index">
         <a href="#">
-            <img class="imagen-logo" src="./img/pizzeria.png" alt="">
+            <img class="imagen-logo" src="src/img/pizzeria.png" alt="">
         </a>
 
 
@@ -31,7 +35,7 @@
             
             <div class="contenedor-carrito">
                 
-                <img class="imagen-carrito" src="./img/carrito.png" alt="">
+                <img class="imagen-carrito" src="src/img/carrito.png" alt="">
                 
 
                 <div id="contenedor-tabla-carrito">
@@ -53,7 +57,9 @@
                 </div>
                 <div id="totales"></div>
             </div>
-            <img class="imagen-favorito" src="./img/favorito.png" alt="">
+            <i class="fas fa-bars" id="menu-bars"></i>
+            <i class="fas fa-search" id="search-icon"> <img class="imagen-favorito" src="src/img/search.png" alt=""></i>
+            
 
             <div class="contenedor-iniciar-sesion">
                 <button onclick="document.getElementById('id01').style.display='block'"
@@ -63,6 +69,12 @@
 
 
     </header>
+    
+    <form action="" id="search-form">
+        <input type="search" placeholder="search here..." name="" id="search-box">
+        <label for="search-box" class="fas fa-search"></label>
+        <i class="fas fa-times" id="close"></i>
+    </form>
 
     
     <section class="home" id="home">
@@ -72,17 +84,17 @@
                 <input class="slide-open" type="radio" id="slide-1" 
                       name="slide" aria-hidden="true" hidden="" checked="checked">
                 <div class="slide-item">
-                    <img src="img/pizza-promocion3.jpg" alt="pizza1">
+                    <img src="src/img/pizza-promocion3.jpg" alt="pizza1">
                 </div>
                 <input class="slide-open" type="radio" id="slide-2" 
                       name="slide" aria-hidden="true" hidden="">
                 <div class="slide-item">
-                    <img src="img/pizza-promocion2.jpg" alt="pizza2">
+                    <img src="src/img/pizza-promocion2.jpg" alt="pizza2">
                 </div>
                 <input class="slide-open" type="radio" id="slide-3" 
                       name="slide" aria-hidden="true" hidden="">
                 <div class="slide-item">
-                    <img src="img/pizza-promocion.jpg" alt="pizza3">
+                    <img src="src/img/pizza-promocion.jpg" alt="pizza3">
                     
                 </div>
                 <label for="slide-3" class="slide-control prev control-1">‹</label>
@@ -106,7 +118,7 @@
         </div>
         <div class="post-content">
             <div class="post-content-column1">
-                <img id="post-content-column1-img" src="img/header-post-content.png" alt="">
+                <img id="post-content-column1-img" src="src/img/header-post-content.png" alt="">
                 <h2 id="post-content-titulo">Bienvenido a La Spezia</h2>
                 <span>Nuestros chefs están trabajando 24/7 y están listos para aceptar visitantes a cuqluier hora del dia y de la noche</span>
                 <span>Nos gustaría aprovechar esta oportunidad para darle la bienvenida a nuestra pizzería.  </span>
@@ -115,10 +127,10 @@
             </div>
             <div class="post-content-column2">
                 <a id="pizza-folleto1" href="#pizzas">
-                    <img src="img/pizza-folleto.jpg" alt="">
+                    <img src="src/img/pizza-folleto.jpg" alt="">
                 </a>
                 <a href="#pizzas">
-                    <img src="img/pizza-folleto2.jpg" alt="">
+                    <img src="src/img/pizza-folleto2.jpg" alt="">
                 </a>
             </div>
         </div>
@@ -129,7 +141,7 @@
     <section class="promociones" id="promociones">
         <div id="lista-cursos" class="lista-cursos">
             <div class="encabezado">
-                <img id="lista-cursos-division" src="img/header-post-content.png" alt="">
+                <img id="lista-cursos-division" src="src/img/header-post-content.png" alt="">
                 <h2 id="encabezado"> ¡Prueba Nuestras Mejores Pizzas! </h2>
             </div>
             
@@ -138,7 +150,7 @@
     
                 <div class="four-columns">
                     <div class="card">
-                        <img src="img/pizza-combo.jpg" class="imagen-curso u-full-width">                        
+                        <img src="src/img/pizza-combo.jpg" class="imagen-curso u-full-width">                        
                         <div class="info-card">
                             <div class="info-card-txt">
                                 <h4>Pizza combo 1</h4>
@@ -159,7 +171,7 @@
     
                 <div class="four-columns">
                     <div class="card">
-                        <img src="img/pizza-combo2.jpg" class="imagen-curso u-full-width">
+                        <img src="src/img/pizza-combo2.jpg" class="imagen-curso u-full-width">
                         <div class="info-card">
                             <div class="info-card-txt">
                                 <h4>Pizza combo 2</h4>
@@ -177,7 +189,7 @@
     
                 <div class="four-columns">
                     <div class="card">
-                        <img src="img/pizza-combo3.jpg" class="imagen-curso u-full-width">
+                        <img src="src/img/pizza-combo3.jpg" class="imagen-curso u-full-width">
                         <div class="info-card">
                             <div class="info-card-txt">
                                 <h4>Pizza combo 3</h4>
@@ -195,7 +207,7 @@
     
                 <div class="four-columns">
                     <div class="card">
-                        <img src="img/pizza-combo4.jpg" class="imagen-curso u-full-width">
+                        <img src="src/img/pizza-combo4.jpg" class="imagen-curso u-full-width">
                         <div class="info-card">
                             <div class="info-card-txt">
                                 <h4>Pizza combo 4</h4>
@@ -222,7 +234,7 @@
     <section class="menu" id="menu">
         <div class="lista-pizzas">
             <div class="encabezado">
-                <img id="lista-cursos-division" src="img/header-post-content.png" alt="">
+                <img id="lista-cursos-division" src="src/img/header-post-content.png" alt="">
                 <h2 id="encabezado"> Menú destacado </h2>
             </div>
             <div class="lista-pizzas-content" >
@@ -245,7 +257,7 @@
                 <div class="target" id="div1">
                     <div class="lista-pizzas-productos-column">
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/pizza-menu-camarones.jpg" alt="">
+                            <img src="src/img/pizza-menu-camarones.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Camarones</h6>
                                 <p id="precio-pieza">$289</p>
@@ -257,7 +269,7 @@
                             
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/pizza-menu-mexicana.jpg" alt="">
+                            <img src="src/img/pizza-menu-mexicana.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Combinada</h6>
                                 <p id="precio-pieza">$189</p>
@@ -269,7 +281,7 @@
                             
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/pizza-menu-alambre.jpg" alt="">
+                            <img src="src/img/pizza-menu-alambre.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Alambre</h6>
                                 <p id="precio-pieza">$209</p>
@@ -283,7 +295,7 @@
                     </div>
                     <div class="lista-pizzas-productos-column">
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/pizza-menu-4quesos.jpg" alt="">
+                            <img src="src/img/pizza-menu-4quesos.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>4 quesos</h6>
                                 <p id="precio-pieza">$209</p>
@@ -293,7 +305,7 @@
                             </div>
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/pizza-menu-ranchera.jpg" alt="">
+                            <img src="src/img/pizza-menu-ranchera.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Ranchera</h6>
                                 <p id="precio-pieza">$289</p>
@@ -303,7 +315,7 @@
                             </div>
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/pizza-menu-veneciana.jpg" alt="">
+                            <img src="src/img/pizza-menu-veneciana.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Veneciana</h6>
                                 <p id="precio-pieza">$269</p>
@@ -317,7 +329,7 @@
                 <div class="target" id="div2">
                     <div class="lista-pizzas-productos-column">
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-refresco-coca.png" alt="">
+                            <img src="src/img/menu-refresco-coca.png" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Coca-cola</h6>
                                 <p id="precio-pieza">$39</p>
@@ -329,7 +341,7 @@
                             
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-refresco-arizona.png" alt="">
+                            <img src="src/img/menu-refresco-arizona.png" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Arizona</h6>
                                 <p id="precio-pieza">$39</p>
@@ -341,7 +353,7 @@
                             
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-refresco-drpepper.png" alt="">
+                            <img src="src/img/menu-refresco-drpepper.png" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Dr Pepper</h6>
                                 <p id="precio-pieza">$49</p>
@@ -355,7 +367,7 @@
                     </div>
                     <div class="lista-pizzas-productos-column">
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-refresco-dry.png" alt="">
+                            <img src="src/img/menu-refresco-dry.png" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Canada Dry</h6>
                                 <p id="precio-pieza">$49</p>
@@ -365,7 +377,7 @@
                             </div>
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-refresco-sprite.png" alt="">
+                            <img src="src/img/menu-refresco-sprite.png" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Squirt</h6>
                                 <p id="precio-pieza">$39</p>
@@ -375,7 +387,7 @@
                             </div>
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-refresco-mundet.png" alt="">
+                            <img src="src/img/menu-refresco-mundet.png" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Sidral Mundet</h6>
                                 <p id="precio-pieza">$39</p>
@@ -389,7 +401,7 @@
                 <div class="target" id="div3" >
                     <div class="lista-pizzas-productos-column">
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-complemento-bastonesPan.png" alt="">
+                            <img src="src/img/menu-complemento-bastonesPan.png" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Bastones</h6>
                                 <p id="precio-pieza">$89</p>
@@ -401,7 +413,7 @@
                             
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-complemento-lasaña.jpg" alt="">
+                            <img src="src/img/menu-complemento-lasaña.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Lazagna</h6>
                                 <p id="precio-pieza">$109</p>
@@ -413,7 +425,7 @@
                             
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-complemento-nachos.jpg" alt="">
+                            <img src="src/img/menu-complemento-nachos.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Nachos</h6>
                                 <p id="precio-pieza">$99</p>
@@ -427,7 +439,7 @@
                     </div>
                     <div class="lista-pizzas-productos-column">
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-complemento-papasgajo.png" alt="">
+                            <img src="src/img/menu-complemento-papasgajo.png" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Papas Gajo</h6>
                                 <p id="precio-pieza">$79</p>
@@ -437,7 +449,7 @@
                             </div>
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-complemento-papasZatis.jpg" alt="">
+                            <img src="src/img/menu-complemento-papasZatis.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Papas Zatis</h6>
                                 <p id="precio-pieza">$79</p>
@@ -447,7 +459,7 @@
                             </div>
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-complemento-spaguetti.jpg" alt="">
+                            <img src="src/img/menu-complemento-spaguetti.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Spaguetti</h6>
                                 <p id="precio-pieza">$109</p>
@@ -461,7 +473,7 @@
                 <div class="target" id="div4">
                     <div class="lista-pizzas-productos-column">
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-postre-natilla.jpg" alt="">
+                            <img src="src/img/menu-postre-natilla.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Natilla</h6>
                                 <p id="precio-pieza">$29</p>
@@ -473,7 +485,7 @@
                             
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-postre-flan.jpg" alt="">
+                            <img src="src/img/menu-postre-flan.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Flan</h6>
                                 <p id="precio-pieza">$29</p>
@@ -485,7 +497,7 @@
                             
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-postre-mordisko.jpg" alt="">
+                            <img src="src/img/menu-postre-mordisko.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Mini Mordisko</h6>
                                 <p id="precio-pieza">$29</p>
@@ -499,7 +511,7 @@
                     </div>
                     <div class="lista-pizzas-productos-column">
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-postre-paleta.jpg" alt="">
+                            <img src="src/img/menu-postre-paleta.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Paleta helada</h6>
                                 <p id="precio-pieza">$39</p>
@@ -509,7 +521,7 @@
                             </div>
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-postre-panke.jpg" alt="">
+                            <img src="src/img/menu-postre-panke.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Panké</h6>
                                 <p id="precio-pieza">$39</p>
@@ -519,7 +531,7 @@
                             </div>
                         </div>
                         <div class="lista-pizzas-productos-column-elemento">
-                            <img src="img/menu-postre-reposteria.jpg" alt="">
+                            <img src="src/img/menu-postre-reposteria.jpg" alt="">
                             <div class="lista-pizzas-productos-column-elemento-txt">
                                 <h6>Borwnie</h6>
                                 <p id="precio-pieza">$29</p>
@@ -542,15 +554,17 @@
             <div class="h3container">
                 
                 <h3>Sign In With</h3>
-                
-                <button id="button-facebook" type="submit">
-                <img src="img/facebook-logotipo.png" alt="Facebook">
-                    Facebook
-                </button>
-                <button id="button-Google" type="submit">
-                    <img src="img/google-logotipo.png" alt="Google">
-                    Google
-                </button>
+                <div class="sign-in">
+                    <div class="sign-in-facebook">
+                        <div class="g-signin2" data-onsuccess="onSignIn" ></div>
+
+                    </div>
+                    <div class="sign-in-google">
+                        <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                    </div>
+
+
+                </div>
                 <span onclick="document.getElementById('id01').style.display='none'" class="close"
                     title="Close Modal">&times;</span>
             </div>
@@ -577,7 +591,7 @@
     <section class="orden" id="orden">
 
         <div class="encabezado">
-            <img id="lista-cursos-division" src="img/header-post-content.png" alt="">
+            <img id="lista-cursos-division" src="src/img/header-post-content.png" alt="">
             <h2 id="encabezado"> ¡Ordene ahora mismo! </h2>
         </div>
     
@@ -666,7 +680,26 @@
     </section>
     
 
-    <script src="./js/index.js"></script>
+    <script src="src/js/index.js"></script>
+    
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1154964505126439',
+      xfbml      : true,
+      version    : 'v15.0'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 </body>
 
 </html>
