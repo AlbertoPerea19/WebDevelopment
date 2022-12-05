@@ -63,7 +63,7 @@
 
             <div class="contenedor-iniciar-sesion">
                 <button onclick="document.getElementById('id01').style.display='block'"
-                    style="width:auto;">Login</button>
+                    style="width:auto;">Iniciar sesión</button>
             </div>
         </div>
 
@@ -73,7 +73,8 @@
     <form action="" id="search-form">
         <input type="search" placeholder="search here..." name="" id="search-box">
         <label for="search-box" class="fas fa-search"></label>
-        <i class="fas fa-times" id="close"></i>
+        <span id="close-search" class="close"
+                        title="Cerrar inicio sesion ">&times;</span>
     </form>
 
     
@@ -548,45 +549,84 @@
         </div>
     </section>
 
-    <div id="id01" class="modal">
+    <section class="Login">
+        <div id="id01" class="modal form-div">
 
-        <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="h3container">
-                
-                <h3>Sign In With</h3>
-                <div class="sign-in">
-                    <div class="sign-in-facebook">
-                        <div class="g-signin2" data-onsuccess="onSignIn" ></div>
-
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="h3container">
+                    
+                    <h3>Iniciar sesión con</h3>
+                    <div class="sign-in">
+                        <div class="sign-in-facebook">
+                            <div class="g-signin2" data-onsuccess="onSignIn" ></div>
+    
+                        </div>
+                        <div class="sign-in-google">
+                            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                        </div>
+    
+    
                     </div>
-                    <div class="sign-in-google">
-                        <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
-                    </div>
-
-
+                    <span id="close-form" class="close"
+                        title="Cerrar inicio sesion ">&times;</span>
                 </div>
-                <span onclick="document.getElementById('id01').style.display='none'" class="close"
-                    title="Close Modal">&times;</span>
-            </div>
-
-            <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" class="form-control" placeholder="Enter Username" name="uname" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
-                <label class="form-checkbox">
-                    <input type="checkbox" checked="checked" name="remember" > Remember me
-                </label>
+    
                 <div class="container">
-                    <span class="psw"> <a href="#">Forgot password?</a></span>
+                    <label for="uname"><b>Usuario</b></label>
+                    <input type="text" class="form-control" placeholder="Ingrese su usuario" name="uname" required>
+    
+                    <label for="psw"><b>Contraseña</b></label>
+                    <input type="password" class="form-control" placeholder="Ingrese su contraseña" name="psw" required>
+                    <label class="form-checkbox">
+                        <input type="checkbox" checked="checked" name="remember" > Rercuerdame
+                    </label>
+                    <div class="container">
+                        <div class="contenedor-registro">
+                            <button onclick="document.getElementById('form-register').style.display='block'"
+                                style="width:auto;">¿No estás registrado? Regístrate</button>
+                        </div>
+                    </div>
+                    <button type="submit">Iniciar sesión</button>
                 </div>
-                <button type="submit">Login</button>
+    
+                
+            </form>
+        
+        </div>
+        <div class="form form-div" id="form-register">
+            <div class="form-content-register">
+                <div class="h3container">
+                    <h3 class="title">¡Bienvenido!</h3>
+                    <h5 class="subtitle">¡Vamos a crear tu cuenta!</h5>
+                    <span id="close-form-register" class="close"
+                        title="Cerrar registro">&times;</span>
+                        
+                </div>
+                <div class="container">
+                    <div class="input-container ic1">
+                        <label for="firstname" class="placeholder">Nombre</label>
+                        <input id="firstname" class="input" type="text" placeholder="Ingrese su nombre" />
+                    </div>
+                    <div class="input-container ic2">
+                        <label for="lastname" class="placeholder">Primer apellido</label>
+                        <input id="lastname" class="input" type="text" placeholder="Ingrese su primer apellido" />
+                    </div>
+                    <div class="input-container ic3">
+                        <label for="email" class="placeholder">Correo electrónico</label>
+                        <input id="email" class="input" type="text" placeholder="Ingrese su correo electrónico" />
+                    </div>
+                    <div class="input-container ic4">
+                        <label for="pass" class="placeholder">Contraseña</label>
+                        <input id="email" class="input" type="password" placeholder="Ingrese su contraseña" />
+                    </div>
+                    <button type="text" class="submit">Crear</button>
+                </div>
+                    
             </div>
-
             
-        </form>
-    </div>
+        </div>
+    </section>
+    
 
     <section class="orden" id="orden">
 

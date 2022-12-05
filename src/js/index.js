@@ -240,6 +240,14 @@ function checkLoginState() {
     document.querySelector('#search-form').classList.toggle('active');
   }
   
-  document.querySelector('#close').onclick = () =>{
+  document.querySelector('#close-search').onclick = () =>{
     document.querySelector('#search-form').classList.remove('active');
+  }
+
+  document.querySelector('#close-form').onclick = () =>{
+    $("#id01").hide();
+  }
+  document.querySelector('#close-form-register').onclick = () =>{
+    $("#id01").hide();
+    $("#form-register").hide();
   }
