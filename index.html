@@ -4,20 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>La Spezia</title>
     <link rel="stylesheet" href="src/css/normalize.css">
     <link rel="stylesheet" href="src/css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="kYHHOdk0"></script>
 
-    <meta name="google-signin-client_id" content="625142742217-43gvq7oqf2a8aon72obe2plmdcem6a3p.apps.googleusercontent.com">
 </head>
 
 <body>
 
-    <header class="header-index">
+    <header class="header-index" id="header-index">
         <a href="#">
             <img class="imagen-logo" src="src/img/pizzeria.png" alt="">
         </a>
@@ -29,55 +27,50 @@
             <a href="#menu">Menu</a>
             <a href="#orden">Orden</a>
         </nav>
-        <div class="icons">
-            
-
-            
-            <div class="contenedor-carrito">
-                
-                <img class="imagen-carrito" src="src/img/carrito.png" alt="">
-                
-
-                <div id="contenedor-tabla-carrito">
-                    <table  id="lista-carrito" class="u-full-width" >
-                        <thead class="lista-carrito-theader">
-                            <tr>
-                                <th>Producto</th>
-                                <th></th>
-                                <th>Cantidad</th>
-                                <th>Precio</th>
-                                <th>Total</th>
-                                <th></th>
-                               
-                            </tr>
-                        </thead>
-                        <tbody class="lista-carrito-tbody"></tbody>
-                    </table>
-                  <!--  <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>-->
-                </div>
-                <div id="totales"></div>
-            </div>
-            <i class="fas fa-bars" id="menu-bars"></i>
-            <i class="fas fa-search" id="search-icon"> <img class="imagen-favorito" src="src/img/search.png" alt=""></i>
-            
-
+        <div class="menu-nav-rightSide">
             <div class="contenedor-iniciar-sesion">
                 <button onclick="document.getElementById('id01').style.display='block'"
                     style="width:auto;">Iniciar sesión</button>
             </div>
+            <div class="icons">
+        
+                <div class="contenedor-carrito">
+                    
+                    <img class="imagen-carrito" id="imagen-carrito" src="src/img/carrito.png" alt="">
+                    
+    
+                    <div id="contenedor-tabla-carrito">
+                        <table  id="lista-carrito" class="u-full-width" >
+                            <thead class="lista-carrito-theader">
+                                <tr>
+                                    <th>Producto</th>
+                                    <th></th>
+                                    <th>Cantidad</th>
+                                    <th>Precio</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody class="lista-carrito-tbody"></tbody>
+                        </table>
+                      <!--  <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>-->
+                    </div>
+                    <div id="totales"></div>
+                </div>
+                
+    
+                
+            </div>
         </div>
-
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
 
     </header>
-    
-    <form action="" id="search-form">
-        <input type="search" placeholder="search here..." name="" id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-        <span id="close-search" class="close"
-                        title="Cerrar inicio sesion ">&times;</span>
-    </form>
 
-    
+  
     <section class="home" id="home">
 
         <div class="slide">
@@ -128,7 +121,7 @@
             </div>
             <div class="post-content-column2">
                 <a id="pizza-folleto1" href="#pizzas">
-                    <img src="src/img/pizza-folleto.jpg" alt="">
+                    <img class="img-folleto1" src="src/img/pizza-folleto.jpg" alt="">
                 </a>
                 <a href="#pizzas">
                     <img src="src/img/pizza-folleto2.jpg" alt="">
@@ -555,16 +548,8 @@
             <form class="modal-content animate" action="/action_page.php" method="post">
                 <div class="h3container">
                     
-                    <h3>Iniciar sesión con</h3>
+                    <h3>Iniciar sesión</h3>
                     <div class="sign-in">
-                        <div class="sign-in-facebook">
-                            <div class="g-signin2" data-onsuccess="onSignIn" ></div>
-    
-                        </div>
-                        <div class="sign-in-google">
-                            <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
-                        </div>
-    
     
                     </div>
                     <span id="close-form" class="close"
@@ -577,9 +562,7 @@
     
                     <label for="psw"><b>Contraseña</b></label>
                     <input type="password" class="form-control" placeholder="Ingrese su contraseña" name="psw" required>
-                    <label class="form-checkbox">
-                        <input type="checkbox" checked="checked" name="remember" > Rercuerdame
-                    </label>
+                    
                     <div class="container">
                         <div class="contenedor-registro">
                             <button onclick="document.getElementById('form-register').style.display='block'"
@@ -721,25 +704,7 @@
     
 
     <script src="src/js/index.js"></script>
-    
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1154964505126439',
-      xfbml      : true,
-      version    : 'v15.0'
-    });
-    FB.AppEvents.logPageView();
-  };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "https://connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 </body>
 
 </html>

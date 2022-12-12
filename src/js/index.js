@@ -60,13 +60,7 @@ window.onload = () =>{
     //Elimina producto del carrito
     carrito.addEventListener( 'click', eliminarProductoCarrito );
 
-    //Vaciar el carrito de compras
-    vaciarCarritoBtn.addEventListener( 'click', ()=>{
-        //Reseteamos el arreglo
-        articulosCarrito = [];
-        //Limpiamos el html del carrito
-        limpiarCarritoHTML();
-    });
+ 
 
 }
 
@@ -206,48 +200,25 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
-
-function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-    console.log('Name: ' + profile.getName());
-    console.log('Image URL: ' + profile.getImageUrl());
-    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-
-  }
-
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('User signed out.');
-    });
-  }
-
-//   FACEBOOK SIGN-IN
-
-function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-      statusChangeCallback(response);
-    });
-  }
-
-  let menu = document.querySelector('#menu-bars');
-  menu.onclick = () =>{
-    menu.classList.toggle('fa-times');
-  }
-
-  document.querySelector('#search-icon').onclick = () =>{
-    document.querySelector('#search-form').classList.toggle('active');
-  }
   
-  document.querySelector('#close-search').onclick = () =>{
-    document.querySelector('#search-form').classList.remove('active');
-  }
 
-  document.querySelector('#close-form').onclick = () =>{
+  document.querySelector('.close').onclick = () =>{
     $("#id01").hide();
   }
   document.querySelector('#close-form-register').onclick = () =>{
     $("#id01").hide();
     $("#form-register").hide();
+  }
+
+  $("#imagen-carrito").click(function(){
+    $("contenedor-tabla-carrito").show();
+  });
+
+  function myFunction() {
+    var x = document.getElementById("header-index");
+    if (x.className === "header-index") {
+      x.className += " responsive";
+    } else {
+      x.className = "header-index";
+    }
   }
